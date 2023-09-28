@@ -20,7 +20,7 @@ function handleGetFormData() {
 /**
  * Validate input values
  * @param {weight: number, height: number}
- * @returns boolean
+ * @returns [boolean, string|null]
  */
 function validateInputValues({ weight, height }) {
 	if (!weight || !height) {
@@ -43,7 +43,7 @@ function validateInputValues({ weight, height }) {
 /**
  * Calculate BMI
  * @param {weight: number, height: number}
- * @returns number
+ * @returns float
  */
 function calculateBMI({ weight, height }) {
 	return (weight / (height / 100) ** 2).toFixed(1);
